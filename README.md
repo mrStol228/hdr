@@ -187,6 +187,34 @@ Key use cases:
 
 ---
 
+## Examples and Test Images
+
+To run the demos, you'll need to provide bracketed exposure images. Place your test images in the `examples/images/` directory.
+
+### Recommended Test Images
+
+For best results, upload **3-5 images** of the same scene with different exposures (bracketed shots):
+
+1. **Under-exposed** (dark, EV -2 to -1): Captures highlights without clipping
+2. **Mid-exposed** (normal, EV 0): Reference exposure
+3. **Over-exposed** (bright, EV +1 to +2): Captures shadows without underexposure
+
+Example filenames: `scene_dark.jpg`, `scene_mid.jpg`, `scene_bright.jpg`
+
+For multi-frame denoising, use **8-10 identical exposures** (burst mode) of a static scene.
+
+### Running Demos
+
+```bash
+# Exposure fusion demo
+python examples/demo_hdr.py --images examples/images/scene_dark.jpg examples/images/scene_mid.jpg examples/images/scene_bright.jpg --out output/
+
+# Response function validation
+python examples/demo_validate.py --images examples/images/*.jpg
+```
+
+---
+
 ## License
 
 MIT
