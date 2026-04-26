@@ -27,6 +27,9 @@ hdr_validate_out/
 *.png
 !assets/*.jpg
 !assets/*.png
+!examples/images/*.jpg
+!examples/images/*.png
+!examples/images/
 
 # OS
 .DS_Store
