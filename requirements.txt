@@ -1,0 +1,6 @@
+numpy>=1.24
+Pillow>=9.0
+scipy>=1.10
+
+# Optional — enables OpenCV-accelerated paths (AlignMTB, MergeMertens, NLM denoising)
+# opencv-python>=4.8
